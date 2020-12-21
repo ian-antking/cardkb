@@ -37,3 +37,23 @@ Connect the wires on the CardKB JST connector to the appropriate pin on the Rasp
 You may need to improvise a connection solution with breadboard wires like so:
 
 ![Assembled a raspberry pi and hyperpixel](https://github.com/ian-antking/cardkb/blob/master/docs/assembled-pi-keyboard.jpg?raw=true)
+
+## Install Software
+
+Install smbus and python-uinput:
+
+```bash
+sudo apt install python3-smbus
+```
+
+```bash
+sudo pip3 install python-uinput
+```
+
+clone this repository:
+
+```
+git clone https://github.com/ian-antking/cardkb.git
+```
+
+Create a service:
