@@ -60,8 +60,8 @@ ascii = {
 
     # number row symbols
     0x21: [uinput.KEY_LEFTSHIFT, uinput.KEY_1],
-    0x40: [uinput.KEY_LEFTSHIFT, uinput.KEY_APOSTROPHE],
-    0x23: [uinput.KEY_LEFTSHIFT, uinput.KEY_BACKSLASH],
+    0x40: [uinput.KEY_LEFTSHIFT, uinput.KEY_2],
+    0x23: [uinput.KEY_LEFTSHIFT, uinput.KEY_3],
     0x24: [uinput.KEY_LEFTSHIFT, uinput.KEY_4],
     0x25: [uinput.KEY_LEFTSHIFT, uinput.KEY_5],
     0x5E: [uinput.KEY_LEFTSHIFT, uinput.KEY_6],
