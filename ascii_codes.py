@@ -49,7 +49,7 @@ ascii = {
     0x20: uinput.KEY_SPACE,
     0xB7: uinput.KEY_RIGHT,
     0x21: [uinput.KEY_LEFTSHIFT, uinput.KEY_1],
-    0x40: [uinput.KEY_LEFTSHIFT, uinput.APOSTROPHE],
+    0x40: [uinput.KEY_LEFTSHIFT, uinput.KEY_APOSTROPHE],
     0x23: [uinput.KEY_LEFTSHIFT, uinput.KEY_3],
     0x24: [uinput.KEY_LEFTSHIFT, uinput.KEY_4],
     0x25: [uinput.KEY_LEFTSHIFT, uinput.KEY_5],
