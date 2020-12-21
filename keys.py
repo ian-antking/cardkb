@@ -54,4 +54,8 @@ keys = [
     uinput.KEY_RIGHTBRACE,
     uinput.KEY_SLASH,
     uinput.KEY_BACKSLASH,
+    uinput.KEY_SEMICOLON,
+    uinput.KEY_GRAVE,
+    uinput.KEY_EQUAL,
+    uinput.KEY_MINUS,
 ]
