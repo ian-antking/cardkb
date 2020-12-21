@@ -76,5 +76,7 @@ ascii = {
     0x5F: [uinput.KEY_LEFTSHIFT, uinput.KEY_MINUS],
     0x3D: uinput.KEY_EQUAL,
     0x3F: [uinput.KEY_LEFTSHIFT, uinput.KEY_SLASH],
+    0x3C: [uinput.KEY_LEFTSHIFT, uinput.KEY_COMMA],
+    0x3E: [uinput.KEY_LEFTSHIFT, uinput.KEY_DOT],
     0x51: [uinput.KEY_LEFTSHIFT, uinput.KEY_Q]
 }
