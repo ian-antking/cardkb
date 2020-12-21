@@ -58,4 +58,6 @@ keys = [
     uinput.KEY_GRAVE,
     uinput.KEY_EQUAL,
     uinput.KEY_MINUS,
+    uinput.KEY_NUMERIC_POUND,
+    uinput.KEY_LEFTALT
 ]

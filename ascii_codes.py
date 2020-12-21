@@ -60,7 +60,7 @@ ascii = {
 
     # number row symbols
     0x21: [uinput.KEY_LEFTSHIFT, uinput.KEY_1],
-    0x40: [uinput.KEY_LEFTSHIFT, uinput.KEY_2],
+    0x40: [uinput.KEY_LEFTSHIFT, uinput.KEY_LEFTALT, uinput.KEY_2],
     0x23: [uinput.KEY_LEFTSHIFT, uinput.KEY_3],
     0x24: [uinput.KEY_LEFTSHIFT, uinput.KEY_4],
     0x25: [uinput.KEY_LEFTSHIFT, uinput.KEY_5],
@@ -76,11 +76,11 @@ ascii = {
     0x5B: uinput.KEY_LEFTBRACE,
     0x5D: uinput.KEY_RIGHTBRACE,
     0x2f: uinput.KEY_SLASH,
-    0x5C: uinput.KEY_BACKSLASH, #outputs `#``
-    0x7C: [uinput.KEY_LEFTSHIFT, uinput.KEY_SLASH], #outputs `?`
-    0x7E: [uinput.KEY_LEFTSHIFT, uinput.KEY_BACKSLASH],
+    0x5C: uinput.KEY_BACKSLASH, 
+    0x7C: [uinput.KEY_LEFTSHIFT, uinput.KEY_BACKSLASH], #outputs `?`
+    0x7E: [uinput.KEY_LEFTSHIFT, uinput.KEY_NUMERIC_POUND],
     0x27: uinput.KEY_APOSTROPHE,
-    0x22: [uinput.KEY_LEFTSHIFT, uinput.KEY_2],
+    0x22: [uinput.KEY_LEFTSHIFT, uinput.KEY_APOSTROPHE],
 
     # bottom row symbols
     0x3B: uinput.KEY_SEMICOLON,
