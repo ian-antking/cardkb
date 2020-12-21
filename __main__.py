@@ -18,6 +18,6 @@ with Device(keys) as device:
                 if isinstance(button, list):
                     device.emit_combo(button)
                 else:
-                    device.emit_click(ascii[data])
+                    device.emit_click(button)
             except Exception as error:
                 print(error)
