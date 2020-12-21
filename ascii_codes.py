@@ -58,7 +58,7 @@ ascii = {
     0x2A: [uinput.KEY_LEFTSHIFT, uinput.KEY_8],
     0x28: [uinput.KEY_LEFTSHIFT, uinput.KEY_9],
     0x29: [uinput.KEY_LEFTSHIFT, uinput.KEY_0],
-    0x7B: uinput.KEY_LEFTBRACE,
-    0x7D: uinput.KEY_RIGHTBRACE,
+    0x7B: [uinput.KEY_LEFTSHIFT, uinput.KEY_LEFTBRACE],
+    0x7D: [uinput.KEY_LEFTSHIFT, uinput.KEY_RIGHTBRACE],
     0x51: [uinput.KEY_LEFTSHIFT, uinput.KEY_Q]
 }
