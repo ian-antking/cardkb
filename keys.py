@@ -1,4 +1,4 @@
-import uinport
+import uinput
 
 keys = [
     uinput.KEY_ESC,
