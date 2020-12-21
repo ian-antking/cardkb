@@ -51,5 +51,7 @@ keys = [
     uinput.KEY_LEFTSHIFT,
     uinput.KEY_APOSTROPHE,
     uinput.KEY_LEFTBRACE,
-    uinput.KEY_RIGHTBRACE
+    uinput.KEY_RIGHTBRACE,
+    uinput.KEY_SLASH,
+    uinput.KEY_BACKSLASH,
 ]

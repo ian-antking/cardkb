@@ -60,5 +60,10 @@ ascii = {
     0x29: [uinput.KEY_LEFTSHIFT, uinput.KEY_0],
     0x7B: [uinput.KEY_LEFTSHIFT, uinput.KEY_LEFTBRACE],
     0x7D: [uinput.KEY_LEFTSHIFT, uinput.KEY_RIGHTBRACE],
+    0x5B: uinput.KEY_LEFTBRACE,
+    0x5D: uinput.KEY_RIGHTBRACE,
+    0x2f: uinput.KEY_SLASH,
+    0x5C: uinput.KEY_BACKSLASH,
+    0x7C: [uinput.KEY_LEFTSHIFT, uinput.KEY_BACKSLASH],
     0x51: [uinput.KEY_LEFTSHIFT, uinput.KEY_Q]
 }
