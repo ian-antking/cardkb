@@ -48,5 +48,6 @@ keys = [
     uinput.KEY_DOT,
     uinput.KEY_SPACE,
     uinput.KEY_RIGHT,
-    uinput.KEY_LEFTSHIFT
+    uinput.KEY_LEFTSHIFT,
+    uinput.KEY_APOSTROPHE
 ]
