@@ -48,5 +48,6 @@ ascii = {
     0x2E: uinput.KEY_DOT,
     0x20: uinput.KEY_SPACE,
     0xB7: uinput.KEY_RIGHT,
+    0x21: [uinput.KEY_LEFTSHIFT, uinput.KEY_1],
     0x51: [uinput.KEY_LEFTSHIFT, uinput.KEY_Q]
 }
