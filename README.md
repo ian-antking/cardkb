@@ -56,4 +56,8 @@ clone this repository:
 git clone https://github.com/ian-antking/cardkb.git
 ```
 
-Create a service:
+Run the script and check buttons return expected characters:
+
+```bash
+sudo python3 cardkb &
+```
