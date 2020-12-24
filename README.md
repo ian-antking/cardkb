@@ -61,3 +61,9 @@ Run the script and check buttons return expected characters:
 ```bash
 sudo python3 cardkb &
 ```
+
+By default, the python script listens to `/dev/i2c-1`, you can change this by adding an argument to the start command.
+
+```bash
+sudo python3 cardkb 11 &
+```
