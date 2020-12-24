@@ -4,8 +4,9 @@ import smbus
 from uinput import Device 
 from ascii_codes import ascii
 from keys import keys
+import sys
 
-bus = smbus.SMBus(1)
+bus = smbus.SMBus(sys.argv[1] or 1)
 address = 0x5f
 
 
