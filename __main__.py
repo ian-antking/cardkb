@@ -15,12 +15,9 @@ address = 0x5f
 with Device(keys) as device:
     while True:
         data = bus.read_byte(address)
-        if data:
-            try:
-                button = ascii[data]
-                if isinstance(button, list):
-                    device.emit_combo(button)
-                else:
-                    device.emit_click(button)
-            except Exception as error:
-                print(error)
+        if data in ascii:
+            button = ascii[data]
+            if isinstance(button, list):
+                device.emit_combo(button)
+            else:
+                device.emit_click(button)
