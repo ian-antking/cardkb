@@ -17,7 +17,4 @@ with Device(keys) as device:
         data = bus.read_byte(address)
         if data in ascii:
             button = ascii[data]
-            if isinstance(button, list):
-                device.emit_combo(button)
-            else:
-                device.emit_click(button)
+            device.emit_combo(button)
