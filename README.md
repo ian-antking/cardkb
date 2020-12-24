@@ -67,3 +67,54 @@ By default, the python script listens to `/dev/i2c-1`, you can change this by ad
 ```bash
 sudo python3 cardkb 11 &
 ```
+
+## Running CardKB when Raspberry Pi starts
+
+We can use systemd to run the CardKB script as a service. To do so, create a unit file:
+
+```bash
+sudo nano /lib/systemd/system/cardkb.service
+```
+
+Add the following:
+
+```
+[Unit]
+Description=Service for using CardKB with Raspberry Pi
+After=multi-user.target
+
+[Service]
+Type=idle
+ExecStart=/usr/bin/python3 /home/pi/cardkb
+
+[Install]
+WantedBy=multi-user.target
+```
+
+This service file assumes that you have cloned the cardkb repo to /home/pi. If this is not the case, you will need to change the file path. 
+
+```
+...
+ExecStart=/usr/bin/python3 /home/ian/cardkb
+...
+```
+
+Likewise, if you are running cardkb on a i2c bus other than one, then you will need to add the bus number to the end of the `ExecStart` line like so:
+
+```
+...
+ExecStart=/usr/bin/python3 /home/pi/cardkb 11
+...
+```
+
+Save the file and exit. Now run the following commands to relaod the systemctl daemon, enable the cardkb service and restart the pi:
+
+```bash
+sudo systemctl daemon-reload
+sudo systemctl enable myscript.service
+sudo reboot
+```
+
+When your Pi restarts, your cardkb should be working, allowing you to log in.
+
+
