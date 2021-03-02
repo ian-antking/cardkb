@@ -38,6 +38,27 @@ You may need to improvise a connection solution with breadboard wires like so:
 
 ![Assembled a raspberry pi and hyperpixel](https://github.com/ian-antking/cardkb/blob/master/docs/assembled-pi-keyboard.jpg?raw=true)
 
+## Load the uinput module
+
+You will need to load the uinput module to allow python-uinput to input key presses. You can check if it is loaded with:
+
+```bash
+lsmod | grep uinput
+```
+
+If nothing is displayed, then the module is not loaded. To load the module, run:
+
+```bash
+modprobe uinput
+```
+
+To load the module automatically on startup, run:
+
+```bash
+sudo nano /etc/modules
+```
+add `uinput` at the bottom of the file. Save and then reboot.
+
 ## Install Software
 
 Install smbus and python-uinput:
