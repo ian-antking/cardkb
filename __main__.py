@@ -6,7 +6,7 @@ from ascii_codes import ascii
 from keys import keys
 import sys
 
-i2c_bus = 1 if len(sys.argv) <= 1 else sys.argv[1]
+i2c_bus = 1 if len(sys.argv) <= 1 else int(sys.argv[1])
 
 bus = smbus.SMBus(i2c_bus)
 address = 0x5f
