@@ -128,11 +128,11 @@ ExecStart=/usr/bin/python3 /home/pi/cardkb 11
 ...
 ```
 
-Save the file and exit. Now run the following commands to relaod the systemctl daemon, enable the cardkb service and restart the pi:
+Save the file and exit. Now run the following commands to reload the systemctl daemon, enable the cardkb service and restart the pi:
 
 ```bash
 sudo systemctl daemon-reload
-sudo systemctl enable myscript.service
+sudo systemctl enable cardkb.service
 sudo reboot
 ```
 
