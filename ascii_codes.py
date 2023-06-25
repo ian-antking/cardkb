@@ -139,9 +139,9 @@ ascii = {
     0x88: [uinput.KEY_LEFTCTRL, uinput.KEY_8],
     0x89: [uinput.KEY_LEFTCTRL, uinput.KEY_9],
     0x8A: [uinput.KEY_LEFTCTRL, uinput.KEY_0],
-    0x8B: [uinput.KEY_LEFTCTRL, uinput.KEY_BACKSPACE],
+#    0x8B: [uinput.KEY_LEFTCTRL, uinput.KEY_BACKSPACE],
 
-    # top row Ctrls
+  # top row Ctrls
     0x8C: [uinput.KEY_LEFTCTRL, uinput.KEY_TAB],
     0x8D: [uinput.KEY_LEFTCTRL, uinput.KEY_Q],
     0x8E: [uinput.KEY_LEFTCTRL, uinput.KEY_W],
@@ -153,7 +153,7 @@ ascii = {
     0x94: [uinput.KEY_LEFTCTRL, uinput.KEY_I],
     0x95: [uinput.KEY_LEFTCTRL, uinput.KEY_O],
     0x96: [uinput.KEY_LEFTCTRL, uinput.KEY_P],
-
+   
     # home row Ctrls
     0x9A: [uinput.KEY_LEFTCTRL, uinput.KEY_A],
     0x9B: [uinput.KEY_LEFTCTRL, uinput.KEY_S],
@@ -177,7 +177,7 @@ ascii = {
     0xAD: [uinput.KEY_LEFTCTRL, uinput.KEY_COMMA],
     0xAE: [uinput.KEY_LEFTCTRL, uinput.KEY_DOT],
     0xAF: [uinput.KEY_LEFTCTRL, uinput.KEY_SPACE],
-
+    
     # arrow key Ctrls
     0x98: [uinput.KEY_LEFTCTRL, uinput.KEY_LEFT],
     0x99: [uinput.KEY_LEFTCTRL, uinput.KEY_UP],

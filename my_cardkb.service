@@ -1,12 +1,15 @@
 [Unit]
 Description=Service for using CardKB with Raspberry Pi
 After=multi-user.target
+StartLimitIntervalSec=300
+StartLimitBurst=5
 
 [Service]
 #User=root
 Type=idle
 ExecStart=/usr/bin/python3 /home/viktor/git/cardkb
 Restart=on-failure
+RestartSec=1s
 
 [Install]
 WantedBy=multi-user.target
