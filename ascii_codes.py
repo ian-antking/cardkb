@@ -125,4 +125,6 @@ ascii = {
     0x42: [uinput.KEY_LEFTSHIFT, uinput.KEY_B],
     0x4E: [uinput.KEY_LEFTSHIFT, uinput.KEY_N],
     0x4D: [uinput.KEY_LEFTSHIFT, uinput.KEY_M],
+
+    0xA8: [uinput.KEY_LEFTCTRL, uinput.KEY_C],
 }
