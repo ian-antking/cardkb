@@ -128,7 +128,7 @@ ascii = {
 
     #fn key will be used as Ctrl
     #number row Ctrls 
-    0x80: [uinput.KEY_LEFTCTRL, uinput.KEY_ESC],
+#    0x80: [uinput.KEY_LEFTCTRL, uinput.KEY_ESC],
     0x81: [uinput.KEY_LEFTCTRL, uinput.KEY_1],
     0x82: [uinput.KEY_LEFTCTRL, uinput.KEY_2],
     0x83: [uinput.KEY_LEFTCTRL, uinput.KEY_3],
@@ -139,7 +139,7 @@ ascii = {
     0x88: [uinput.KEY_LEFTCTRL, uinput.KEY_8],
     0x89: [uinput.KEY_LEFTCTRL, uinput.KEY_9],
     0x8A: [uinput.KEY_LEFTCTRL, uinput.KEY_0],
-#    0x8B: [uinput.KEY_LEFTCTRL, uinput.KEY_BACKSPACE],
+    0x8B: [uinput.KEY_LEFTCTRL, uinput.KEY_BACKSPACE],
 
   # top row Ctrls
     0x8C: [uinput.KEY_LEFTCTRL, uinput.KEY_TAB],
