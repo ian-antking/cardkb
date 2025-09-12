@@ -5,9 +5,9 @@ StartLimitIntervalSec=300
 StartLimitBurst=5
 
 [Service]
-#User=root
 Type=idle
-ExecStart=/usr/bin/python3 /home/viktor/git/cardkb
+User=pi
+ExecStart=/usr/bin/env cardkb
 Restart=on-failure
 RestartSec=3s
 

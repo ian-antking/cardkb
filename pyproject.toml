@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cardkb"
+version = "0.1.0"
+description = "Driver for M5Stack CardKB (I2C mini keyboard) on Raspberry Pi"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [
+  { name = "Ian King", email = "hello@antking.co" }
+]
+requires-python = ">=3.7"
+dependencies = [
+  "python-uinput",
+  "smbus2"
+]
+
+[project.urls]
+Homepage = "https://github.com/ian-antking/cardkb"
+Issues = "https://github.com/ian-antking/cardkb/issues"
+
+[project.scripts]
+cardkb = "cardkb.__main__:main"
