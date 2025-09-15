@@ -6,7 +6,7 @@ StartLimitBurst=5
 
 [Service]
 Type=idle
-ExecStart=/usr/local/bin/cardkb 11
+ExecStart=/usr/local/bin/cardkb
 Restart=on-failure
 RestartSec=3s
 
