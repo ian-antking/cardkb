@@ -4,7 +4,7 @@ A script for using the M5Stack CardKB with Raspberry Pi
 
 ## Setting your pi to us layout
 
-In order for buttons to return the correct symbols, the keyboard layout will need to be set to us on you pi. You can do this by running:
+In order for buttons to return the correct symbols, the keyboard layout will need to be set to `us` on your Pi. You can do this by running:
 
 ```bash
 sudo nano /etc/default/keyboard
@@ -12,7 +12,8 @@ sudo nano /etc/default/keyboard
 
 and changing `XKBLAYOUT` to `us`:
 
-```
+```ini
+
 # KEYBOARD CONFIGURATION FILE
 
 # Consult the keyboard(5) manual page.
@@ -25,14 +26,15 @@ XKBOPTIONS=""
 BACKSPACE="guess"
 ```
 
-## Enable i2C
-The cardKB communicates over i2C, make sure this is enabled on your raspberry pi. You can find a tutorial on how to do so [here](https://www.raspberrypi-spy.co.uk/2014/11/enabling-the-i2c-interface-on-the-raspberry-pi/).
+## Enable I²C
+
+The cardKB communicates over I²C, make sure this is enabled on your raspberry pi. You can find a tutorial on how to do so [here](https://www.raspberrypi-spy.co.uk/2014/11/enabling-the-i2c-interface-on-the-raspberry-pi/).
 
 ## Connect CardKB to Raspberry Pi
 
-Connect the wires on the CardKB JST connector to the appropriate pin on the Raspberry Pi. 
+Connect the wires on the CardKB JST connector to the appropriate pin on the Raspberry Pi.
 
-![CardKB/Raspberry Pi i2C connection](https://github.com/ian-antking/cardkb/blob/master/docs/wiring.png?raw=true)
+![CardKB/Raspberry Pi I²C connection](https://github.com/ian-antking/cardkb/blob/master/docs/wiring.png?raw=true)
 
 You may need to improvise a connection solution with breadboard wires like so:
 
@@ -59,76 +61,35 @@ sudo nano /etc/modules
 ```
 add `uinput` at the bottom of the file. Save and then reboot.
 
-## Install Software
-
-Install smbus and python-uinput:
+## Install CardKB via PyPI
 
 ```bash
-sudo apt install python3-smbus
+sudo apt update
+sudo apt install python3-smbus python3-uinput python3-pip
+sudo pip install --break-system-packages cardkb
 ```
+
+## Test CardKB
 
 ```bash
-sudo pip3 install python-uinput
+sudo cardkb &
 ```
 
-clone this repository:
-
-```
-git clone https://github.com/ian-antking/cardkb.git
-```
-
-Run the script and check buttons return expected characters:
-
-```bash
-sudo python3 cardkb &
-```
-
-By default, the python script listens to `/dev/i2c-1`, you can change this by adding an argument to the start command.
-
-```bash
-sudo python3 cardkb 11 &
-```
+> [!IMPORTANT]  
+> By default, the python script listens to `/dev/i2c-1`. Some displays (like the Pimoroni Hyperpixel) expose a different interface. You can specify which interface to use by adding an argument to the start command.
+> `sudo cardkb 11 &`
 
 ## Running CardKB when Raspberry Pi starts
 
-We can use systemd to run the CardKB script as a service. To do so, create a unit file:
+We can use systemd to run the CardKB script as a service. To do so, you can use the `cardkb.service` from source code:
 
 ```bash
-sudo nano /lib/systemd/system/cardkb.service
+sudo curl -L -o /etc/systemd/system/cardkb.service https://raw.githubusercontent.com/ian-antking/cardkb/main/cardkb.service
 ```
 
-Add the following:
-
-```
-[Unit]
-Description=Service for using CardKB with Raspberry Pi
-After=multi-user.target
-
-[Service]
-Type=idle
-ExecStart=/usr/bin/python3 /home/pi/cardkb
-
-[Install]
-WantedBy=multi-user.target
-```
-
-This service file assumes that you have cloned the cardkb repo to /home/pi. If this is not the case, you will need to change the file path. 
-
-```
-...
-ExecStart=/usr/bin/python3 /home/ian/cardkb
-...
-```
-
-Likewise, if you are running cardkb on a i2c bus other than one, then you will need to add the bus number to the end of the `ExecStart` line like so:
-
-```
-...
-ExecStart=/usr/bin/python3 /home/pi/cardkb 11
-...
-```
-
-Save the file and exit. Now run the following commands to reload the systemctl daemon, enable the cardkb service and restart the pi:
+> [!IMPORTANT]  
+> If you are running cardkb on a i2c bus other than 1, then you will need to edit the `cardkb.service` file to add the bus number to the end of the `ExecStart` line like so:
+> `ExecStart=/usr/local/bin/cardkb 11`
 
 ```bash
 sudo systemctl daemon-reload
@@ -137,5 +98,3 @@ sudo reboot
 ```
 
 When your Pi restarts, your cardkb should be working, allowing you to log in.
-
-
