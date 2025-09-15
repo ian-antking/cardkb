@@ -76,7 +76,7 @@ sudo cardkb &
 ```
 
 > [!IMPORTANT]  
-> By default, the python script listens to `/dev/i2c-1`, you can change this by adding an argument to the start command.
+> By default, the python script listens to `/dev/i2c-1`. Some displays (like the Pimoroni Hyperpixel) expose a different interface. You can specify which interface to use by adding an argument to the start command.
 > `sudo cardkb 11 &`
 
 ## Running CardKB when Raspberry Pi starts
