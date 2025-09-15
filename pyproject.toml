@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "cardkb"
-version = "0.1.2"
+version = "1.0.0"
 description = "Driver for M5Stack CardKB (I2C mini keyboard) on Raspberry Pi"
 readme = "README.md"
 license = { text = "MIT" }
