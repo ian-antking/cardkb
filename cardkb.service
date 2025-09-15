@@ -1,13 +1,12 @@
 [Unit]
-Description=Service for using CardKB with Raspberry Pi
+Description=CardKB service for Raspberry Pi
 After=multi-user.target
 StartLimitIntervalSec=300
 StartLimitBurst=5
 
 [Service]
 Type=idle
-User=pi
-ExecStart=/usr/bin/env cardkb
+ExecStart=/usr/local/bin/cardkb 11
 Restart=on-failure
 RestartSec=3s
 
