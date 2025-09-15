@@ -4,7 +4,7 @@ A script for using the M5Stack CardKB with Raspberry Pi
 
 ## Setting your pi to us layout
 
-In order for buttons to return the correct symbols, the keyboard layout will need to be set to us on your Pi. You can do this by running:
+In order for buttons to return the correct symbols, the keyboard layout will need to be set to `us` on your Pi. You can do this by running:
 
 ```bash
 sudo nano /etc/default/keyboard
@@ -32,7 +32,7 @@ The cardKB communicates over I²C, make sure this is enabled on your raspberry p
 
 ## Connect CardKB to Raspberry Pi
 
-Connect the wires on the CardKB JST connector to the appropriate pin on the Raspberry Pi. 
+Connect the wires on the CardKB JST connector to the appropriate pin on the Raspberry Pi.
 
 ![CardKB/Raspberry Pi I²C connection](https://github.com/ian-antking/cardkb/blob/master/docs/wiring.png?raw=true)
 
