@@ -35,7 +35,7 @@ def main():
         while True:
             try:
                 data = bus.read_byte(address)
-            except Exception:
+            except OSError:
                 traceback.print_exc()
                 data = 0x00
 
